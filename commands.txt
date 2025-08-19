@@ -1,0 +1,29 @@
+# Register locations
+LOCATION REGISTER LA
+LOCATION REGISTER LB
+LOCATION REGISTER LA        # duplicate
+
+# Add inventory
+INVENTORY INCREMENT LA IA 5
+INVENTORY INCREMENT LA IB 3
+INVENTORY INCREMENT LC IC 2 # non-existent location
+
+# Decrement inventory
+INVENTORY DECREMENT LA IA 2
+INVENTORY DECREMENT LA IA 5 # insufficient
+INVENTORY DECREMENT LA IC 1 # non-existent item
+
+# Transfer inventory
+INVENTORY TRANSFER LA LB IA 2
+INVENTORY TRANSFER LA LC IA 1 # destination doesn't exist
+INVENTORY TRANSFER LB LA IA 5 # insufficient in source
+
+# Observe inventories
+INVENTORY OBSERVE LA
+INVENTORY OBSERVE LB
+INVENTORY OBSERVE LC         # non-existent location
+
+# Unregister location
+LOCATION UNREGISTER LC       # does not exist
+LOCATION UNREGISTER LB       # has inventory
+LOCATION UNREGISTER LA       # should succeed if empty
