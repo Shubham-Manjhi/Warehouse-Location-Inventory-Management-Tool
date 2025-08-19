@@ -1,4 +1,4 @@
-# 📦 Warehouse Location & Inventory Management Tool
+# Warehouse Location & Inventory Management Tool
 
 ## Overview
 This is a command-line tool for managing warehouse **locations** and **inventories**.  
@@ -8,7 +8,7 @@ The tool uses **JSON persistence** with file locking to handle concurrent proces
 
 ---
 
-## ⚙️ Design Decisions
+## Design Decisions
 
 1. **Data Model**
    - State stored in `warehouse_state.json`:
@@ -34,7 +34,7 @@ The tool uses **JSON persistence** with file locking to handle concurrent proces
 
 ---
 
-## ▶️ How to Run
+## How to Run
 
 ### 1. Run the tool
 ```bash
@@ -55,7 +55,7 @@ python warehouse.py < commands.txt
 
 ---
 
-## 📖 Commands
+## Commands
 
 - LOCATION REGISTER <LOCATION_ID>
 - LOCATION UNREGISTER <LOCATION_ID>
@@ -66,7 +66,7 @@ python warehouse.py < commands.txt
 
 ---
 
-## ✅ Example
+## Example
 
 Input:
 ```
@@ -84,7 +84,7 @@ ITEM IA 5
 
 ---
 
-## 📂 Files
+## Files
 - `warehouse.py` → main tool
 - `README.md` → documentation
 - `commands.txt` → sample commands
